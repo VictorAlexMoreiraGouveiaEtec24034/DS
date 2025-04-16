@@ -14,7 +14,27 @@ try:
     Cidade = input("Cidade atual: ")
     Trabalha = input("Trabalha? (Sim/Não): ").strip().lower()
     
-    # Verificando se data de nascimento é válida
+    # Função que verifica se o Nome foi preenchido corretamente
+    def verifica_nomes(nome, nome_pai, nome_mae, pais, cidade):
+        if not nome or not nome.replace(" ", "").isalpha():
+            raise ValueError("Nome inválido.")
+        
+        if not nome_pai or not nome_pai.replace(" ", "").isalpha():
+            raise ValueError("Nome do pai inválido.")
+        
+        if not nome_mae or not nome_mae.replace(" ", "").isalpha():
+            raise ValueError("Nome da mãe inválido.")
+        
+        if not pais or not pais.replace(" ", "").isalpha():
+            raise ValueError("País inválido.")
+        
+        if not cidade or not cidade.replace(" ", "").isalpha():
+            raise ValueError("Cidade inválida.")
+        
+        return True
+        
+    
+    # função que verificando se data de nascimento é válida  
     if DiaNascimento < 1 or DiaNascimento > 31:
         raise ValueError("Dia inválido.")
     if MesNascimento < 1 or MesNascimento > 12:
@@ -31,19 +51,21 @@ try:
         colaborador = Profissao(Nome, DiaNascimento, MesNascimento, AnoNascimento, Pais, Cidade, Cargo, Empresa)
         colaborador.Dados_Colaborador()
     
-    else:
+    if (Trabalha == 'não'):
         individuo = Pessoa(Nome, DiaNascimento, MesNascimento, AnoNascimento, Pais, Cidade)
         individuo.Trabalha = False
         individuo.Cargo = None
         individuo.Empresa = None
         
-        individuo.Dados_Pessoais()
+    else:
+        print("Opção inválida. Por favor, insira 'sim' ou 'não'.")
                 
 except KeyboardInterrupt:
     print("Programa interrompido")
     
 except ValueError:
-    print("Valor inválido. Por favor, insira um número inteiro.")
+    print("Valor inválido.")
+    
     
 except TypeError:
     print("Erro ao preencher, por favor varifique se as informações estão corretas.")

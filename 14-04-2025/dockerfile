@@ -1,0 +1,15 @@
+FROM python:3.13
+
+WORKDIR /app
+
+# Define a codificação como UTF-8
+ENV PYTHONIOENCODING=utf-8
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+
+# Copia os arquivos necessários para o container
+COPY ./index.py .
+COPY ./modelo.py .
+
+# Executa o programa Python
+CMD [ "python", "cadastar.py" ]
