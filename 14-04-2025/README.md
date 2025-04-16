@@ -7,7 +7,6 @@ O projeto inteiro será feito em python e será inclusa libs externas e interna 
 ___
 
 <center><h2>Formas de inicialização</h2></center>
-<br>
 
 #### Interpretador do Python
 **OBS:** É necessario que seu computador tenha o python instalado de preferencia a versão mais recente.
@@ -36,4 +35,4 @@ python ./index.py
 ___
 ### Créditos
 **Desenvolvido por: Victor Alex Moreira Gouveia**
-**Link do perfil no github:** [Perfil do GitHub](https://github.com/VictorAlexMoreiraGouveiaEtec24034/DS)
+**Link do perfil no github:** [GitHub link](https://github.com/VictorAlexMoreiraGouveiaEtec24034/DS/tree/main/14-04-2025)
